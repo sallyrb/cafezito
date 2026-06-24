@@ -1,0 +1,179 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'CatCafe';
+  src: url('./assets/fonts/CatCafe.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue','Playfair Display', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fef8f4;
+  color: #4a3728;
+  line-height: 1.6;
+}
+
+:root {
+  /* Primary - Coffee Orange */
+  --orange: #f5a623;
+  --orange-light: #ffc44d;
+  --orange-dark: #e08e0b;
+
+  /* Secondary - Cream */
+  --cream: #fff5f0;
+  --cream-light: #fff;
+  --cream-dark: #ffecd2;
+
+  /* Accent - Brown */
+  --brown: #6f4e37;
+  --brown-light: #8b7355;
+  --brown-dark: #4a3728;
+
+  /* Success - Leaf Green */
+  --success: #4caf50;
+  --success-light: #81c784;
+  --success-dark: #388e3c;
+
+  /* Warning - Amber */
+  --warning: #ffb74d;
+  --warning-light: #ffe082;
+  --warning-dark: #ff9800;
+
+  /* Error - Coral */
+  --error: #ff6b6b;
+  --error-light: #ff8a80;
+  --error-dark: #ff5252;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(139, 69, 19, 0.08);
+  --shadow-md: 0 4px 16px rgba(139, 69, 19, 0.1);
+  --shadow-lg: 0 8px 24px rgba(139, 69, 19, 0.12);
+}
+
+/* Toast Styles */
+.toast-container {
+  position: fixed;
+  top: 80px;
+  right: 24px;
+  z-index: 300;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 320px;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(139, 69, 19, 0.2);
+  animation: toastSlideIn 0.3s ease;
+  gap: 12px;
+}
+
+@keyframes toastSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.toast-success {
+  border-left: 4px solid var(--success);
+}
+
+.toast-success span {
+  color: var(--success-dark);
+}
+
+.toast-error {
+  border-left: 4px solid var(--error);
+}
+
+.toast-error span {
+  color: var(--error-dark);
+}
+
+.toast span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.toast button {
+  padding: 4px 8px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #8b7355;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.toast button:hover {
+  opacity: 1;
+}
+
+@media (max-width: 640px) {
+  .toast-container {
+    top: auto;
+    bottom: 100px;
+    right: 16px;
+    left: 16px;
+    max-width: none;
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff5f0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4a574;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c49a6c;
+}
+
+/* Selection Styling */
+::selection {
+  background: rgba(245, 166, 35, 0.3);
+  color: #4a3728;
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+}

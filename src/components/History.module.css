@@ -1,0 +1,81 @@
+.history {
+  padding: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.historyTitle {
+  margin: 0 0 24px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #4a3728;
+  text-align: center;
+  font-family: 'CatCafe', serif;
+}
+
+.loading {
+  text-align: center;
+  padding: 48px;
+  font-size: 16px;
+  color: #8b7355;
+  font-family: 'CatCafe', serif;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 32px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(139, 69, 19, 0.08);
+  font-family: 'CatCafe', serif;
+}
+
+.emptyIcon {
+  font-size: 64px;
+  margin-bottom: 24px;
+  animation: float 3s ease-in-out infinite;
+  font-family: 'CatCafe', serif;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.emptyText {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #4a3728;
+}
+
+.emptySubtext {
+  margin: 0;
+  font-size: 16px;
+  color: #8b7355;
+}
+
+.recordsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (max-width: 640px) {
+  .history {
+    padding: 24px 16px;
+  }
+
+  .empty {
+    padding: 48px 24px;
+  }
+
+  .emptyIcon {
+    font-size: 48px;
+  }
+}

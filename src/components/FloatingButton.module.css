@@ -1,0 +1,35 @@
+.floatingButton {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  padding: 18px 32px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #f5a623 0%, #e08e0b 100%);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 32px rgba(245, 166, 35, 0.45);
+  transition: all 0.3s ease;
+  z-index: 50;
+}
+
+.floatingButton:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 40px rgba(245, 166, 35, 0.55);
+}
+
+.floatingButton:active {
+  transform: translateY(-2px) scale(1.02);
+}
+
+@media (max-width: 640px) {
+  .floatingButton {
+    bottom: 24px;
+    right: 24px;
+    left: 24px;
+    width: calc(100% - 48px);
+    padding: 16px;
+  }
+}

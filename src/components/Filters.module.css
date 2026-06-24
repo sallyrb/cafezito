@@ -1,0 +1,125 @@
+.filters {
+  padding: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* .filtersTitle {
+  margin: 0 0 24px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #4a3728;
+  text-align: center;
+}
+
+.filtersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(139, 69, 19, 0.08);
+  align-items: flex-end;
+} */
+
+.filtersContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(139, 69, 19, 0.08);
+}
+
+.filtersTitle {
+  margin: 0 0 24px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #4a3728;
+  text-align: center;
+  font-family: 'CatCafe', serif;
+}
+
+.filtersRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.filterGroup {
+  flex: 1;
+  min-width: 200px;
+}
+
+.filterLabel {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6f4e37;
+}
+
+.filterInput {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 15px;
+  color: #4a3728;
+  background: #fff5f0;
+  border: 2px solid #f0e6df;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.filterInput:focus {
+  outline: none;
+  border-color: #f5a623;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(245, 166, 35, 0.15);
+}
+
+.filterInput::placeholder {
+  color: #c4a574;
+}
+
+.clearButton {
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #e08e0b;
+  background: #fff5f0;
+  border: 2px solid #f5a623;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.clearButton:hover {
+  background: #f5a623;
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .filters {
+    padding: 24px 16px;
+  }
+
+  .filtersContainer {
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .filterGroup {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .clearButton {
+    width: 100%;
+  }
+}
